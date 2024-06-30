@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier l'annonce{% endblock %}
+{# <script src="{{ asset('build/app.js') }}"></script> #}
+{% block body %}
+<script>
+    var data = {{ data|json_encode|raw }};
+</script>
+<div id="root"></div>
+{% endblock %}

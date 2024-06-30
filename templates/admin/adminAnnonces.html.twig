@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonces admin{% endblock %}
+{# <script src="{{ asset('build/app.js') }}"></script> #}
+{% block body %}
+<script>
+    var allA = {{ Annonces| json_encode |raw }};
+</script>
+<div id="root"></div>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% block title %}{% endblock %}
+<head>
+{% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+</head>
+{% block body %}    
+
+    <div id="root" email="{{ email | json_encode }}"
+                phone="{{ phone | json_encode }}"
+                firstName="{{ firstName | json_encode }}"
+                lastName="{{ lastName | json_encode }}"
+                isAdmin="{{ isAdmin | json_encode }}"></div>
+
+{% endblock %}
+</html>
